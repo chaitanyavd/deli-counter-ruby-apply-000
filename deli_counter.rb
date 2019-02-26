@@ -4,8 +4,8 @@ def line(array)
   c = 0
   if array.length > 0
     puts "The line is currently: "
-    array.each do |names|
-      puts (c +=1).to_s + ". " + names.to_s
+    array.each do |position|
+      puts position.to_s
     end
   else
     puts "The line is currently empty."
@@ -14,11 +14,12 @@ end
 
 line(katz_deli)
 
+$counter = 0
 
-
-def take_a_number(array, name)
-  array << name
-  puts "Welcome #{name}. You are number #{array.length} in line."
+def take_a_number(array)
+  
+  array << $counter += 1
+  puts "Welcome number #{$counter}. You are number #{array.length} in line."
 end
 
 puts
